@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: #18181b;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper{
+    width: 1300px;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.card{
+    margin: auto;
+    width: 250px;
+    height: 350px;
+    padding: 2rem;
+    position: relative;
+    perspective: 500px;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    transition: .8s all ease-in-out;
+    transform-style: preserve-3d;
+    
+}
+
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(217, 240, 156, 0.150);
+    background-color: #1c1c1f;
+    border: 1px solid #323235;
+}
+
+.card:hover .content{
+    transform: rotateY(180deg);
+}
+
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-img{
+    border-radius: 10px;
+}
+
+.card-text *{
+    margin: 0;
+}
+.card-title{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.card-subtitle{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #A1A1AA;
+}
+
+.card-description{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-transform: none;
+    color: #A1A1AA;
+}
+
+.front::before{
+    content: "\f362";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    color: #A1A1AA;
+    font-size: 1.5rem;
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+    from{
+        transform: rotateY(0);
+    }
+
+    to{
+        transform: rotateY(180deg);
+        color: white;
+    }
+}
