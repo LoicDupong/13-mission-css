@@ -10,23 +10,6 @@
 | Animation avec @keyframes pour une des icônes|  |  |
 
 
----
-
-## 🛠️ Installation
-
-```bash
-git clone https://github.com/LoicDupong/13-mission-css.git
-cd 13-mission-css
-```
-
----
-
-## ▶️ Utilisation
-
-Ouvre `index.html` dans ton navigateur.
-
----
-
 ## ⚙️ Configuration
 
 Aucune configuration nécessaire.
